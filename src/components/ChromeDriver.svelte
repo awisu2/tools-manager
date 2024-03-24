@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import type {
     ChromeKnownVersions,
     ChromeVersionsWithDwonloads,
@@ -12,7 +13,7 @@
   let data: ChromeVersionsWithDwonloads | null = null
   let knownVersions: ChromeKnownVersions | null = null
 
-  async function download() {
+  async function load() {
     let s = await downloadChromedriverVersions()
     data = JSON.parse(s)
 
@@ -27,11 +28,15 @@
     let _version = data?.versions.find((v) => v.version == version)
     return _version
   }
+
+  onMount(() => {
+    load()
+  })
 </script>
 
 <div>
   chrome driver
-  <button on:click={download}>download</button>
+  <button on:click={load}>roload</button>
   <div>orign: https://googlechromelabs.github.io/chrome-for-testing/</div>
 
   {#if knownVersions}
