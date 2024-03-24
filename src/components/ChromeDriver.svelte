@@ -32,6 +32,7 @@
 <div>
   google driver
   <button on:click={download}>download</button>
+  <div>orign: https://googlechromelabs.github.io/chrome-for-testing/</div>
 
   {#if knownVersions}
     <ul class="ul ul-indent">
