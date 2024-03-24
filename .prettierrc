@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "prettier-plugin-svelte"
+  ],
+  "semi": false,
+  "printWidth": 88,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "trailingComma": "none",
+  "vueIndentScriptAndStyle": false
+}

@@ -30,7 +30,7 @@
 </script>
 
 <div>
-  google driver
+  chrome driver
   <button on:click={download}>download</button>
   <div>orign: https://googlechromelabs.github.io/chrome-for-testing/</div>
 
