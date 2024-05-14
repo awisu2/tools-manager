@@ -52,7 +52,7 @@
                     {binary}
                     <ul class="ul ul-indent">
                       {#each download as d}
-                        <li>{d.platform}: {d.url}</li>
+                        <li>{d.platform}: <a href={d.url}>{d.url}</a></li>
                       {/each}
                     </ul>
                   </li>
@@ -67,7 +67,7 @@
 
   {#if data}
     <details>
-      <summary>infos</summary>
+      <summary class="pointer">infos</summary>
       <ul class="ul">
         <li>timestamp: {data.timestamp}</li>
 
@@ -81,7 +81,9 @@
                   <div>{binaly}</div>
                   <ul class="ul ul-indent">
                     {#each version.downloads[binaly] as download}
-                      <li>{download.platform}, {download.url}</li>
+                      <li>
+                        {download.platform}, <a href={download.url}>{download.url}</a>
+                      </li>
                     {/each}
                   </ul>
                 </li>
